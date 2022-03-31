@@ -1,0 +1,33 @@
+[
+  '{{repeat(5, 7)}}',
+  {
+    _id: '{{objectId()}}',
+    billingRecordID: '{{index([10000001])}}',
+    offer: '{{integer(4000000, 5000000)}}',
+    br_dates: '06/09/2021 - 06/15/2021',
+    income_date: '{06/08/2021 - 06/15/2021',
+    report_dates: '06/06/2021 - 06/17/2021',
+    location_name: '24 - HAGGEN',
+    allowance: 'S-06-88',
+    item_detail: [
+      '{{repeat(5)}}',
+      {
+        id: '{{index()}}',
+        sku: '0033838833-45345353535353',
+        cic_description: 'CIC Description',
+        date: '05/16/2021 - 05/31/2021',
+        billing_details: [
+          '{{repeat(20)}}',
+          {
+            id: '{{index()}}',
+            date: '{{date(new Date(2021, 6, 1), new Date(), "MM-dd-YYYY")}}',
+            sum_quantity_sold: '{{integer(1, 120)}}',
+            weighted_retail_price: '{{floating(1, 10, 2, "$0,0.00")}}',
+            sum_markdown_quantity: '{{floating(0, 1, 0, "0%")}}',
+            weighted_promo_price: '{{floating(1, 10, 2, "$0,0.00")}}'
+          }
+        ]
+      }
+    ]
+  }
+]
