@@ -33,7 +33,7 @@ public class AppTest {
     @Test
     public void testApp() {
 
-        String mongoUri = "mongodb+srv://offshoreuser:pAaqwMRsvZwPIfef@cluster0.ymjan.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+        String mongoUri = "mongodb+srv://offshoreuser:somepassword@cluster0.ymjan.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
         String databaseName = "albert_test";
         db = MongoClients.create(mongoUri).getDatabase(databaseName);
         billingRecordsCollection = db.getCollection("BillingRecords");
